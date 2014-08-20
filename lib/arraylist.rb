@@ -12,7 +12,7 @@ module Mongoid
         end
 
         define_method "#{field}_list=" do |arg|
-          list = arg.split(',').map { |v| v.titlecase.strip }
+          list = arg.split(',').map { |v| v.strip }
           self.public_send("#{field}=", list)
         end
       end
