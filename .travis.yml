@@ -1,0 +1,10 @@
+script: "bundle exec rspec spec"
+rvm:
+  - 2.3.3
+env:
+  - MONGOID_VERSION=3
+  - MONGOID_VERSION=4
+  - MONGOID_VERSION=5
+  - MONGOID_VERSION=6
+services:
+  - mongodb
