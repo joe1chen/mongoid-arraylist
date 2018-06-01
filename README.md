@@ -1,4 +1,5 @@
 # mongoid-arraylist
+[![Build Status](https://secure.travis-ci.org/joe1chen/mongoid-arraylist.png)](http://travis-ci.org/joe1chen/mongoid-arraylist)
 
 mongoid-arraylist includes two methods on your model, that makes it really simple to deal with mongodb arrays. No need for custom form's or controller logic to deal with adding items to a mongodb array. 
 
@@ -37,10 +38,10 @@ Or install it yourself as:
     => "tag1, tag2, tag3" 
 
     post.tags
-    => ["Tag1", "Tag2", "Tag3"]   
+    => ["tag1", "tag2", "tag3"]   
 
     post.tags_list
-    => "Tag1, Tag2, Tag3" 
+    => "tag1, tag2, tag3" 
 
   In your view:
 
