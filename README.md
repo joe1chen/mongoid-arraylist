@@ -1,5 +1,5 @@
 # mongoid-arraylist
-[![Build Status](https://secure.travis-ci.org/joe1chen/mongoid-arraylist.png)](http://travis-ci.org/joe1chen/mongoid-arraylist)
+[![Build Status](https://github.com/joe1chen/mongoid-arraylist/actions/workflows/test.yml/badge.svg)](https://github.com/joe1chen/mongoid-arraylist/actions)
 
 mongoid-arraylist includes two methods on your model, that makes it really simple to deal with mongodb arrays. No need for custom form's or controller logic to deal with adding items to a mongodb array. 
 
