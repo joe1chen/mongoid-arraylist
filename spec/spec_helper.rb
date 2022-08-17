@@ -15,13 +15,10 @@ end
 
 RSpec.configure do |config|
   # Clean up the database
-  require 'database_cleaner'
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.orm = 'mongoid'
-  end
+  require "database_cleaner/mongoid"
+  DatabaseCleaner[:mongoid].strategy = [:deletion]
 
-  config.before(:each) do
-    DatabaseCleaner.clean
+  RSpec.configure do |c|
+    c.before(:each) { DatabaseCleaner.clean }
   end
 end
