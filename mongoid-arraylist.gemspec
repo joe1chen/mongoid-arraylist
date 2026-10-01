@@ -10,15 +10,15 @@ Gem::Specification.new do |gem|
   gem.email         = ["ismail@zyelabs.net"]
   gem.description   = %q{Define methods for working with mongodb arrays in views}
   gem.summary       = %q{Lets you pass a string of items to your model, will split by ',' and save to mongodb as an array}
-  gem.homepage      = "https://github.com/ismaild/mongoid-arraylist"
+  gem.homepage      = "https://github.com/joe1chen/mongoid-arraylist"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency "mongoid"
+  gem.add_dependency "mongoid", ">= 7.0", "< 10"
   gem.add_development_dependency "rake"
-  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "rspec", "~> 3.13"
   gem.add_development_dependency('database_cleaner-mongoid')
 end
