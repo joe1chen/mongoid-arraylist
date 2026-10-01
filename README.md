@@ -30,12 +30,13 @@ The gemspec allows `mongoid >= 7.0, < 10`.
 
 ## Installation
 
-This fork is not published to RubyGems; install it from GitHub. The library file is `arraylist`, not the gem
-name, so Bundler needs `require:`:
+This fork is not published to RubyGems; install it from GitHub, pinned to a release tag
+([releases](https://github.com/joe1chen/mongoid-arraylist/releases)). The library file is `arraylist`, not the
+gem name, so Bundler needs `require:`:
 
 ```ruby
 # Gemfile
-gem 'mongoid-arraylist', github: 'joe1chen/mongoid-arraylist', require: 'arraylist'
+gem 'mongoid-arraylist', github: 'joe1chen/mongoid-arraylist', tag: 'v0.1.0', require: 'arraylist'
 ```
 
 Then `bundle install`. (Without `require:`, add `require 'arraylist'` before your models load.)
@@ -92,11 +93,10 @@ To add a combination to CI, add a row to `matrix.include` in `.github/workflows/
 
 ## History
 
-- **0.0.3+ (DOGOnews fork, 2026)** — GitHub Actions matrix up to Ruby 3.4 / Rails 8.0 / Mongoid 9.0 /
-  MongoDB 8.0; mongoid dependency `>= 7.0, < 10`; specs on RSpec 3.13 with database_cleaner-mongoid.
-- **0.0.3 (joe1chen fork, 2014–2022)** — no titlecasing of items, nil-safe getter, tested up to Rails 7.0 /
-  Mongoid 8.0.
-- **0.0.1–0.0.2 (ismaild, 2013)** — original releases on RubyGems.
+Ismail Dhorat's original (2013, released to RubyGems as 0.0.1 and 0.0.2) was continued by DOGOnews in this fork:
+0.0.3 (2014–2018: items no longer titlecased, nil-safe getter, Mongoid 2–6), then 0.1.0 (2026: Mongoid 7.0–9.x
+on current Ruby/Rails/MongoDB, tested by a GitHub Actions matrix).
+See [CHANGELOG.md](CHANGELOG.md).
 
 ## Credits
 
